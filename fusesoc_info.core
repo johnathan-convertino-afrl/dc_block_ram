@@ -1,0 +1,34 @@
+CAPI=2:
+
+name: AFRL:ram:dc_block_ram:1.0.0
+description: A standard dual clock block ram.
+
+filesets:
+  src:
+    files:
+      - src/dc_block_ram.v
+    file_type: verilogSource
+  
+  tb:
+    files:
+      - tb/tb_fifo.v : { file_type: verilogSource }
+
+  dep:
+    depend:
+      - AFRL:utility:helper:1.0.0
+      
+  dep_tb:
+    depend:
+      - AFRL:simulation:clock_stimulator
+      - AFRL:utility:sim_helper
+    
+targets:
+  default: &default
+    description: Default for IP intergration.
+    filesets: [src, dep]
+
+  sim: &sim
+    <<: *default
+    default_tool: icarus
+    toplevel: tb_dc_block_ram
+    filesets_append: [tb, dep_tb]
