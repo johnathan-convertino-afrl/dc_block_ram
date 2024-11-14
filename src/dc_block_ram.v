@@ -43,7 +43,7 @@
  *   RAM_DEPTH    - Number of words using the size of BYTE_WIDTH.
  *   BYTE_WIDTH   - Width of the data bus in bytes.
  *   ADDR_WIDTH   - Width of the address bus in bits.
- *   BIN_FILE     - Read a hex value text file as the initial state of the RAM.
+ *   HEX_FILE     - Read a hex value text file as the initial state of the RAM.
  *   RAM_TYPE     - Used to set the ram_style atribute.
  *
  * Ports:
@@ -64,7 +64,7 @@ module dc_block_ram #(
     parameter RAM_DEPTH  = 1,
     parameter BYTE_WIDTH = 1,
     parameter ADDR_WIDTH = 1,
-    parameter BIN_FILE   = "",
+    parameter HEX_FILE   = "",
     parameter RAM_TYPE   = "block"
   )
   (
@@ -88,8 +88,8 @@ module dc_block_ram #(
 
   generate
     initial begin
-      if(BIN_FILE != "") begin
-        $readmemh(BIN_FILE, block_ram);
+      if(HEX_FILE != "") begin
+        $readmemh(HEX_FILE, block_ram);
       end
     end
   endgenerate

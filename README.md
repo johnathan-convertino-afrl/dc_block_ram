@@ -41,7 +41,7 @@
 * RAM_DEPTH   : Depth of the RAM in size BYTE_WIDTH
 * ADDR_WIDTH  : Address size for RAM(THIS DOES NOT AUTOMATICALLY SIZE INTERNALLY, THATS UP TO YOU)
 * BYTE_WIDTH  : How many bytes wide the data in/out will be.
-* BIN_FILE    : File to initialize RAM with ("" is none).
+* HEX_FILE    : Hex file to initialize RAM with ("" is none).
 * RAM_TYPE    : Set the BLOCK RAM type of the fifo.
 
 ### COMPONENTS
