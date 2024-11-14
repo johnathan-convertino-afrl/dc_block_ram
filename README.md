@@ -1,5 +1,8 @@
 # DC BLOCK RAM
 ### Dual Clock block ram for all FPGA systems
+
+![image](docs/manual/img/AFRL.png)
+
 ---
 
    author: Jay Convertino  
@@ -19,7 +22,13 @@
 #### Previous
   - none
 
-### Dependencies
+### DOCUMENTATION
+  For detailed usage information, please navigate to one of the following sources. They are the same, just in a different format.
+
+  - [dc_block_ram.pdf](docs/manual/dc_block_ram.pdf)
+  - [github page](https://johnathan-convertino-afrl.github.io/dc_block_ram/)
+
+### DEPENDENCIES
 #### Build
   - AFRL:utility:helper:1.0.0
   
@@ -27,8 +36,7 @@
   - AFRL:simulation:clock_stimulator
   - AFRL:utility:sim_helper
   
-### IP USAGE
-#### Parameters
+### PARAMETERS
 
 * RAM_DEPTH   : Depth of the RAM in size BYTE_WIDTH
 * ADDR_WIDTH  : Address size for RAM(THIS DOES NOT AUTOMATICALLY SIZE INTERNALLY, THATS UP TO YOU)
@@ -45,12 +53,12 @@
 
 * tb_fifo.v (not done at the moment)
   
-### fusesoc
+### FUSESOC
 
 * fusesoc_info.core created.
 * Simulation uses icarus to run data through the core.
 
-#### TARGETS
+#### Targets
 
 * RUN WITH: (fusesoc run --target=sim VENDER:CORE:NAME:VERSION)
   - default (for IP integration builds)

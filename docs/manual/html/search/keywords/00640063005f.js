@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("dc_",["Module","File"],[["dc_block_ram",,[[,,,,0,"File:dc_block_ram.v:dc_block_ram","SystemVerilogModule:dc_block_ram"],[,"dc_block_ram.v",,,1,"File:dc_block_ram.v:dc_block_ram.v"]]]]);
