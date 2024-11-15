@@ -81,7 +81,7 @@ Home Page: ../html/other/html.html
 # ------------------------------------------------------------------------
 
 Source Folder: ../../../src
-   Name: bus_uart
+   Name: dc_block_ram
 
 
 # This is where you tell Natural Docs which folders it should scan for source
