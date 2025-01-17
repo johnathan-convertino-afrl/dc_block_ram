@@ -11,7 +11,7 @@ filesets:
   
   tb:
     files:
-      - tb/tb_fifo.v : { file_type: verilogSource }
+      - tb/tb_dc_block_ram.v : { file_type: verilogSource }
 
   dep:
     depend:

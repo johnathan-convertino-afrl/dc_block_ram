@@ -1,1 +1,1 @@
-﻿NDMenu.OnSectionLoaded("modules.js",[[1,"dc_block_ram"]]);
+﻿NDMenu.OnSectionLoaded("modules.js",[[1,"clk_stim"],[1,"dc_block_ram"],[1,"inst_dc_block_ram"]]);
