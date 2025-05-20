@@ -83,7 +83,7 @@ module dc_block_ram #(
   
   integer index;
 
-  (* ram_style = RAM_TYPE *) reg [(BYTE_WIDTH*8)-1:0] block_ram[RAM_DEPTH-1:0];
+  (* ram_style = RAM_TYPE *) reg [(BYTE_WIDTH*8)-1:0] block_ram[RAM_DEPTH];
   reg [(BYTE_WIDTH*8)-1:0] r_rd_data;
 
   generate

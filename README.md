@@ -27,14 +27,6 @@
 
   - [dc_block_ram.pdf](docs/manual/dc_block_ram.pdf)
   - [github page](https://johnathan-convertino-afrl.github.io/dc_block_ram/)
-
-### DEPENDENCIES
-#### Build
-  - AFRL:utility:helper:1.0.0
-  
-#### Simulation
-  - AFRL:simulation:clock_stimulator
-  - AFRL:utility:sim_helper
   
 ### PARAMETERS
 
@@ -62,4 +54,5 @@
 
 * RUN WITH: (fusesoc run --target=sim VENDER:CORE:NAME:VERSION)
   - default (for IP integration builds)
+  - lint
   - sim
