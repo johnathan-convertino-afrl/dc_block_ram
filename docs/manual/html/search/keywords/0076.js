@@ -1,1 +1,1 @@
-﻿NDSearch.OnPrefixDataLoaded("v",["File"],[["v",,[[,"dc_block_ram.v",,,0,"File:dc_block_ram.v:dc_block_ram.v"],[,"tb_dc_block_ram.v",,,0,"File2:tb_dc_block_ram.v:tb_dc_block_ram.v"]]]]);
+﻿NDSearch.OnPrefixDataLoaded("v",["File"],[["v",,[[,"dc_block_ram.v",,,0,"File:dc_block_ram.v:dc_block_ram.v"],[,"tb_cocotb.v",,,0,"File2:tb_cocotb.v:tb_cocotb.v"],[,"tb_dc_block_ram.v",,,0,"File2:tb_dc_block_ram.v:tb_dc_block_ram.v"]]]]);

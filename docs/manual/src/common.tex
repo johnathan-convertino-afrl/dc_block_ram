@@ -100,15 +100,34 @@ Below highlights important folders from the root of the directory.
 
 \section{Simulation}
 \par
-There are a few different simulations that can be run for this core.
+There are a few different simulations that can be run for this core. The backend used for testing is iverilog for verilog or cocotb simulations. Usually GTKWave is used to view the fst waveform output. Cocotb are the unit tests that attempt to give a pass/fail verification to the core operation.
 
 \subsection{iverilog}
 \par
-iverilog is used for simple test benches for quick verification, visually, of the core.
+iverilog is used for simple test benches for quick visual verification of the core. This will autofinish after it has
+run up to a certain number of words have been output.
 
 \subsection{cocotb}
 \par
-This feature is not implemented for this core.
+This method allows for quick writing of test benches that actually assert and check the state of the core.
+These tests are much more conclusive since it will run all test vectors and generate a report if they
+pass or fail. All tests output waves to a single fst file. The method of launching the tests is to use
+fusesoc. These have not been written to use a python runner method or makefiles.
+To use the cocotb tests you must install the following python libraries.
+\begin{lstlisting}[language=bash]
+  $ pip install cocotb
+\end{lstlisting}
+
+The targets available are listed below.
+\begin{itemize}
+  \item \textbf{sim\_cocotb} Standard simulation for PISO.
+\end{itemize}
+
+The targets above can be run with various parameters.
+This test will check the input/output against each other to validate core operation.
+\begin{lstlisting}[language=bash]
+  $ fusesoc run --target sim_cocotb AFRL:ram:dc_block_ram:1.0.0
+\end{lstlisting}
 
 \newpage
 
@@ -116,6 +135,9 @@ This feature is not implemented for this core.
 
 \begin{itemize}
 \item \textbf{dc\_block\_ram} Generic dual clock block RAM\\
+\item \textbf{tb\_dc\_block\_ram-v} Verilog test bench\\
+\item \textbf{tb\_cocotb-py} Cocotb python test routines\\
+\item \textbf{tb\_cocotb-v} Cocotb verilog test bench\\
 \end{itemize}
 The next sections document the module.
 

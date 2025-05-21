@@ -27,7 +27,7 @@
 <A
  HREF="dc_block_ram_node16.html">
 <IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
-<A ID="tex2html85"
+<A ID="tex2html89"
   HREF="dc_block_ram_node1.html">
 <IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A>  
 <BR>
@@ -37,7 +37,7 @@
  HREF="dc_block_ram_node15.html">Simulation</A>
 <B> Previous:</B> <A
  HREF="dc_block_ram_node16.html">iverilog</A>
- &nbsp; <B>  <A ID="tex2html86"
+ &nbsp; <B>  <A ID="tex2html90"
   HREF="dc_block_ram_node1.html">Contents</A></B> 
 <BR>
 <BR></DIV>
@@ -48,7 +48,33 @@ cocotb</A>
 </H2>
 
 <P>
-This feature is not implemented for this core.
+This method allows for quick writing of test benches that actually assert and check the state of the core.
+These tests are much more conclusive since it will run all test vectors and generate a report if they
+pass or fail. All tests output waves to a single fst file. The method of launching the tests is to use
+fusesoc. These have not been written to use a python runner method or makefiles.
+To use the cocotb tests you must install the following python libraries.
+<TABLE FRAME="VOID" CELLPADDING="4"><TR><TD>
+<PRE>
+  $ pip install cocotb
+</PRE>
+</TD></TR></TABLE>
+
+<P>
+The targets available are listed below.
+
+<UL>
+<LI><SPAN  CLASS="textbf">sim_cocotb</SPAN> Standard simulation for PISO.
+</LI>
+</UL>
+
+<P>
+The targets above can be run with various parameters.
+This test will check the input/output against each other to validate core operation.
+<TABLE FRAME="VOID" CELLPADDING="4"><TR><TD>
+<PRE>
+  $ fusesoc run --target sim_cocotb AFRL:ram:dc_block_ram:1.0.0
+</PRE>
+</TD></TR></TABLE>
 
 <P>
 <P>

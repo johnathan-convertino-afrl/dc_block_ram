@@ -1,1 +1,1 @@
-﻿NDMenu.OnSectionLoaded("files.js",[[2,"dc_block_ram","File:",[[1,"dc_block_ram.v"]]],[2,"tb_dc_block_ram","File2:",[[1,"tb_dc_block_ram.v"]]]]);
+﻿NDMenu.OnSectionLoaded("files.js",[[2,"source","File:",[[1,"dc_block_ram.v"]]],[2,"test_bench","File2:",[[1,"tb_cocotb.py"],[1,"tb_cocotb.v"],[1,"tb_dc_block_ram.v"]]]]);

@@ -13,6 +13,11 @@ filesets:
     files:
       - tb/tb_dc_block_ram.v : { file_type: verilogSource }
 
+  tb_cocotb:
+    files:
+      - tb/tb_cocotb.py : {file_type : user, copyto : .}
+      - tb/tb_cocotb.v : { file_type: verilogSource }
+      
   dep:
     depend:
       - AFRL:utility:helper:1.0.0
@@ -42,3 +47,65 @@ targets:
     default_tool: icarus
     toplevel: tb_dc_block_ram
     filesets_append: [tb, dep_tb]
+    
+  sim_cocotb:
+    <<: *default
+    description: Cocotb unit tests
+    flow: sim
+    flow_options:
+      tool: icarus
+      cocotb_module: tb_cocotb
+      timescale: 1ns/100ps
+    filesets_append: [tb_cocotb]
+    toplevel: tb_cocotb
+    parameters:
+      - RD_CLOCK_SPEED
+      - WR_CLOCK_SPEED
+      - RAM_DEPTH
+      - BYTE_WIDTH
+      - ADDR_WIDTH
+      - HEX_FILE
+      - RAM_TYPE
+      
+parameters:
+  RD_CLOCK_SPEED:
+    datatype    : int
+    default     : 1000000
+    description : Read clock speed.
+    paramtype   : vlogparam
+    
+  WR_CLOCK_SPEED:
+    datatype    : int
+    default     : 1000000
+    description : Write clock speed.
+    paramtype   : vlogparam
+    
+  RAM_DEPTH:
+    datatype    : int
+    default     : 256
+    description : Number of words using the size of BYTE_WIDTH.
+    paramtype   : vlogparam
+
+  BYTE_WIDTH:
+    datatype    : int
+    default     : 4
+    description : Number of bytes for data path width.
+    paramtype   : vlogparam
+
+  ADDR_WIDTH:
+    datatype    : int
+    default     : 8
+    description : Width of the address bus in bits.
+    paramtype   : vlogparam
+    
+  HEX_FILE:
+    datatype    : str
+    default     : ""
+    description : Read a hex value text file as the initial state of the RAM.
+    paramtype   : vlogparam
+    
+  RAM_TYPE:
+    datatype    : str
+    default     : "block"
+    description : Used to set the ram_style atribute.
+    paramtype   : vlogparam

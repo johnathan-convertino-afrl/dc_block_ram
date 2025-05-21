@@ -48,7 +48,8 @@
   
 #### TB
 
-* tb_fifo.v (not done at the moment)
+* tb_dc_block_ram.v
+* tb_cocotb
   
 ### FUSESOC
 
@@ -61,3 +62,4 @@
   - default (for IP integration builds)
   - lint
   - sim
+  - sim_cocotb
