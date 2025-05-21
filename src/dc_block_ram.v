@@ -59,6 +59,7 @@
  *   wr_ben       - Write byte enable, each bit represents one byte of write data.
  *   wr_data      - Write data input
  *   wr_addr      - Write data address select
+ *
  */
 module dc_block_ram #(
     parameter RAM_DEPTH  = 1,

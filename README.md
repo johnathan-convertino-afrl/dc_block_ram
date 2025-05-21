@@ -5,14 +5,19 @@
 
 ---
 
-   author: Jay Convertino  
+  author: Jay Convertino  
+  
+  date: 2024.02.11
+  
+  details: Generic dual clock block RAM that has data write enables.
+  
+  license: MIT   
    
-   date: 2024.02.11
-   
-   details: Generic dual clock block RAM that has data write enables.
-   
-   license: MIT   
-   
+  Actions:  
+
+  [![Lint Status](../../actions/workflows/lint.yml/badge.svg)](../../actions)  
+  [![Manual Status](../../actions/workflows/manual.yml/badge.svg)](../../actions)  
+  
 ---
 
 ### Version
