@@ -44,6 +44,7 @@ targets:
 
   sim: &sim
     <<: *default
+    description: Verilog Sim
     default_tool: icarus
     toplevel: tb_dc_block_ram
     filesets_append: [tb, dep_tb]
