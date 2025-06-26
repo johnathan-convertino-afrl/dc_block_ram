@@ -1,5 +1,6 @@
 # DC BLOCK RAM
 ### Dual Clock block ram for all FPGA systems
+---
 
 ![image](docs/manual/img/AFRL.png)
 
